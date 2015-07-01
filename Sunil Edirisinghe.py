@@ -8,7 +8,7 @@ main_soup = BeautifulSoup(main_html)
 
 alldivs = main_soup.findAll('div')
 
-for song in alldivs[19:95]:
+for song in alldivs[19:96]:
   temphtml = Browser().open(song.a['href'])
   tempsoup = BeautifulSoup(temphtml)
   save_as = os.path.join("./", song.a.text+".mp3" )
